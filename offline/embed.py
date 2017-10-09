@@ -31,4 +31,5 @@ context = {
     'pie_chart': pie_chart,
 }
 
+# pass Plotly charts 'div' outputs to the template engine
 create_html('embed_template.html', 'embed.html', context)

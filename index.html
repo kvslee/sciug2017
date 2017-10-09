@@ -118,16 +118,16 @@
 						<li>Sirera offers APIs (Direct SQL & REST API)</li>
 						<li>Customize a data report as you wish</li>
 					</ul>				
-					<aside class="notes">There are many data visualization tools available. Many of them are open source.
+					<aside class="notes">Why not? There are many data visualization tools available. Many of them are open source.
 						For example, D3 javasript library is very popular. You may heard of many buzz words like big data, 
 						AI, machine learning, etc. Our generation try to understand large amount of data that is being produced 
-						every single second thought online services. Although libraries do not handle extremly large data as big
+						every single second through online services. Although libraries do not handle extremly large data as big
 						companies do, we, librarians, have also genuine interest in user behaviors and interactions. 
 						<br><br>
 						Thankfully, Innovative has advocated Open Library Stacks (OLS) architecture. With the merger of Polaris 
-						and VTLS, OLS idea becomes more important. The main idea is to creat a hightly scalable cloud platform
+						and VTLS, OLS idea becomes more important. The main idea is to create a hightly scalable cloud platform
 						to make their different products communicate each other. For this goal, APIs are critically important,
-						because APIs open data to other products, which can be Innovative's another product, or third body of companies,
+						because APIs make data sharable among other products, which can be Innovative's another product, or third body of companies',
 						or your local program.
 						<br><br>
 						We, humans, are creative beings. We want to make reports in the format that we want. Not only data content, 
@@ -138,7 +138,7 @@
 				</section>
 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
 					<h1>Exploring data <br>is<br> fun!</h1>
-					<aside class="notes">Best motivation of all things: FUN! We are curious beings.
+					<aside class="notes"><span style="color:darkgreen"> (Slide)</span> Best motivation of all things: FUN! We are curious beings.
 					</aside>					
 				</section>				
 				<section>
@@ -170,7 +170,7 @@
 						<li>D3.js(SVG) and stack.gl (WebGL) for web graphics</li>
 						<li>Great API Documentation & Examples</li> 
 					</ul>
-					<aside class="notes">
+					<aside class="notes"><span style="color:darkgreen"> (Slide)</span>
 					</aside>
 					<br>
 				</section>
@@ -184,11 +184,13 @@
 							<a href="https://raw.githubusercontent.com/kvslee/sciug2017/master/circ_trans.csv" target="_blank"> (data)</a></li>
 						<li>Import: File Upload, URL Link, SQL DB Connector</li>
 					</ul>
-					<aside class="notes">Show different types of charts.<br> Create a sample chart of library checkouts. <br>
+					<aside class="notes">Show Plotly examples, different types of charts.<br><br>
+					<span style="color:darkgreen"> (Slide)</span>>
+					 Create a sample chart of library checkouts. <br>
 					A: Leatherby, Law, Brandman, Science, Music<br>
 					B: 530, 280, 74, 50, 38 	<br>
 					Bar, Pie, Scatter <br><br>
-					We see that it is very easy to create a chart in a few minutes. In summary, to create a chart, we need
+					We see that it is very easy to create a plotly chart online. In summary, to create a chart, we need
 					data, plot type, attributes (axes)
 					</aside>
 				</section>															
@@ -207,10 +209,12 @@
 						<br><br>
 					Python Library pages show many examples and API documentation. For example, if you go Pie Chart, 
 					you will see sample codes to create a chart. Comparing the API documentation and those examples,
-					you can undestand how to use the library.  
+					you can undestand how to use the library.  <span style="color:darkgreen"> (Slide)</span>
 					<br><br>
 					Before creating an actual offfline chart, we need to learn a little bit how to setup the offline library.
-					We will use the method, plotly.offline.plot().
+					We will use the method, plotly.offline.plot(). 
+					<br><br>
+					<span style="color:darkgreen"> (Code, offline/first.py)</span>
 						</aside>					
 				</section>
 				<section>
@@ -222,12 +226,15 @@
 						   <ul><li>Output Div => Template</li></ul>
 						</li>
 						<li>a template html</li>
+						<li>an embed example</li>
 					</ul>
 					<aside class="notes">In most cases, we may need embeded charts. With simply changing an option of
 						output type to div, we can create a embedded chart.<br><br>
-						Why do we need a template engine and a template file. Plotly programatically outputs a chart 
-						in HTML div element. We need to integrate this 'div' output inside a main document as written
+						And we will use template engine and a template html file. Why? Plotly programatically outputs a chart 
+						in HTML div element. We need to embed the 'div' output in a report document, as written
 						in the template html. 
+						<br><br>
+						<span style="color:darkgreen"> (Code, offline/embed.py)</span>>
 						 </aside>					
 				</section>				
 				<section>
@@ -248,7 +255,9 @@
 						<li>Online & Offline (output_type, offline.plot())</li>
 						<li>Template engine (Jinja2) and a template html</li>
 					</ul>
-					<aside class="notes">Now, we covered most basics of Plotly Online and Offline.
+					<aside class="notes"><span style="color:darkgreen"> (Slide)</span>>
+					<br><br>
+					Now, we covered most basics of Plotly Online and Offline.
 						Even being basic, they are enough foundation for the following section.   
 						Let's move to the next topic, Sierra database. 
 					</aside>					
@@ -282,12 +291,14 @@
 					</ul>
 					<aside class="notes">The easiest way to work with Sierra database is using SQL Client. PostgreSQL has
 						its own SQL client, called PGAdmin. You can download it with PostgeSQl database on your local PC.(Slide)
+					<br><br>
+					<span style="color:darkgreen"> (Slide)</span>>
 					</aside>	
 				</section>	
 				<section>
 					<h3>Setup PGAdmin</h3>
 					<img src="images/pgadmin_setup.png">
-					<aside class="notes">Setting PGAdmin is straightforward. (Slide)
+					<aside class="notes">Setting PGAdmin is straightforward. <span style="color:darkgreen"> (Slide)</span>>
 					</aside>	
 				</section>									
 				<section>
@@ -301,9 +312,9 @@
 						<li>Example: Transactions > Circulation > checkout</li>
 					</ul>
 					<aside class="notes">PGAdmin displays all viewable tables (349 tables under sierra_view schema).
-						To understand Sierra database, you need to spend some times. You may browse through all tables. 
-						However, often times, some tables or fields are not obvious to understand. Then, you can got and refer to 
-						SierraDNA, which is the msot valuable resource to learn Sierra database. It includes detailed descriptions
+						To understand Sierra database, you need to spend some times. You may browse through all tables in PGAdmin. 
+						However, often times, some tables or fields are not obvious to understand. Then, you can go and refer to 
+						SierraDNA, which is the most valuable resource to learn Sierra database. It includes detailed descriptions
 						on tables and fields. To find the tables in your concern, you can follow category navigation links or 
 						use the search box on the right top. SierraDNA shows not only detailed table view but also Entity Relationship
 						Diagram. ERD is useful sometimes to create a join queries because it visualizes relationships among tables.   
@@ -321,14 +332,15 @@
 					</code></pre>
 					<aside class="notes">Seeing once is better than hearing a hundred times. Let me show PGAdmin briefly. 
 						And I will run an sample query in it. Once we are connected to Sierra database, you will see all tables
-						and fields. And you can see query pane and result pane. 
+						and fields. And you can see query pane and result pane. Right-clicking on a table, you can first 100 records.
+						The table shows all fields name and data types.
 					</aside>					
 				</section>
 				<section>
 					<h3>Plotly & Sierra</h3>
 					<p><span class="fragment highlight-green" data-fragment-index="1">How to use Sierra data in Plotly?</span></p>
 					<ul>
-						<li>Reuse Plotly offline script</li>
+						<li>Re-use Plotly offline script</li>
 						<li>But, with Sierra data</li>
 						<li>Three things:
 							<ul>
@@ -341,7 +353,7 @@
 					<aside class="notes">Now, we have learned how to use Plotly and how to harvest Sierra data with a SQL query.
 						It is time to put them together. We will reuse the Plotly offline script, because visualization logic is 
 						the same. However, this time, we will use actual Sierra data, instead of our dummy data. Here, we should
-						have in mind three things. (Slides) Because visualization part of Plotly script remains the same, we only need 
+						have in mind three things. <span style="color:darkgreen"> (Slide)</span> Because visualization part of Plotly script remains the same, we only need 
 						to take care of the first two things: 1) getting data and 2) transforming it to the Plotly data format. 
 						To get data, we need to connect and run a query on Sierra database. How do we do that in a Python program?
 						We will use a PostgreSQL database adapter, called psycopg2. With the psycopg2.  
@@ -369,8 +381,9 @@
 						each row of the patron_home_library_code column and count the transaction by the patron_home_library_code. 
 						Finally, the function retuns a list that is right to feed into Plotly chart.  
 						<br><br>
-						Look at the code again. (the code "sierra_chart.py) The Plotly setup is exactly the same. We only changed the data part (x axis and y axis)
-						with the data that we get from Sirrra and transformed. 
+						Look at the code again.  <span style="color:darkgreen"> (Code, "sierra_chart.py)</span>
+						The Plotly setup is exactly the same. We only changed the data part (x axis and y axis)
+						with the data that we get from Sirrra and transformed. Let's run the script, sierra_chart.py.
 					</aside>					
 				</section>
 				<section>
@@ -391,7 +404,7 @@
 							so that Plotly will ouput charts to divs. The chart outputs will be passed to the template engine and
 							the multuple charts will be displayed as specified in the template html file.
 							<br><br>
-							Now let's run sierra_chart_embed.py. (the code "sierra_chart_embed.py)
+							Now let's run sierra_chart_embed.py. <span style="color:darkgreen">(the code "sierra_chart_embed.py) </span>
 						</aside>
 					</section>	
 					<section>
@@ -410,8 +423,8 @@
 						<li>Python <span style="color:#ff9999">sys.argv</span> - read user inputs from terminal</li>
 						<li>User Inputs:
 							<ul>
-								<li>days</li>
-								<li>transaction types(o i f r) </li>
+								<li>days (10 => 5)</li>
+								<li>transaction types(o i f r = > o i) </li>
 								<li>ouput filename</li>
 							</ul>
 						</li>
@@ -428,7 +441,7 @@
 						<br><br>
 						I am going to demonstrate how it runs. I have three user inputs	(days, transaction types, output filename).
 						<br><br>
-						(In teminal, run it interactively).
+						<span style="color:darkgreen">(In teminal, run the script, sierra_chart_embed, interactively).</span>
 						<br><br>
 						I will not go deeper on this subject. But this technique will be used in the next section, Jupyter.
 						</aside>					
@@ -443,6 +456,8 @@
 						<li>Data transformation & template</li>
 						<li>Interactive program</li>
 					</ul>
+					<aside class="notes"><span style="color:darkgreen">(Slide) </span>
+					</aside>					
 				</section>
 				<section>
 					<h3>What is Jupyter?</h3>
@@ -486,7 +501,7 @@
 					<aside class="notes">If you are interesed, I strongly recommend to you to try on your PC. As I mentioned,
 						it runs on its own host. When you install on your PC, it will run on localhost:8888. 
 						<br><br>
-						Use Anaconda for installation. Anaconda is one of Python distributions, which include Python 
+						Use Anaconda for installation. Anaconda is one of Python distributions, which includes Python 
 						and many scientitic	and data science packages (NumPy, Scipy, Jupyter).  
 						<br><br>
 						(Slide)
@@ -510,9 +525,11 @@
 						<br><br>
 						(Slide - three tweaks)
 						<br><br>
-						(Show Jupyter/plotly.ipynb). We use offline.iplot, instead offline.plot. Because we are working 
+						We use offline.iplot, instead offline.plot. Because we are working 
 						on our local Jupyter server, we should turn on init_notebook_mode (Connected=True). Finally, we
 						don't need to specify a filename, because Plotly charts will show up on Jupyter, not on a file. 
+					    <br><br>
+						<span style="color:darkgreen">(Show Jupyter/plotly.ipynb) </span>
 					</aside>	
 				</section>
 				<section>
@@ -536,24 +553,26 @@
 						<li>Jupyter: Communication</li>
 					</ul>
 					<aside class="notes">You saw how we can utilize three tools together. Plotly can be used to create 
-						visualizated charts. We can collect library data (circulation transaction, patron, overdue,
-						bib and items, acq/orders, systerm codes, etc) using Sierra SQL API. SQL API is not writable. 
-						This means that we cannot update records with this API. However, it can support many needs of 
-						local library business analytics. Currently, we mostly do business and collection analysis 
-						using Create List function in Sierra and exported excel files. Using Sierra SQL API, we can 
-						create a dynamic and automated report on a browser interface. 
+						visualizated charts. We can collect library data using Sierra SQL API (circulation transaction, 
+						patron, overdue, bib and items, acq/orders, systerm codes, etc). And we can present the Plotly
+						charts and Sierra data on Jupyter dynamically. On Jupyter, a browser-based web application, 
+						we may more focus on communicating ideas. 
+						<br><br>
+						SQL API is not writable. This means that we cannot update records with this API. However, 
+						for creating a report, mostly reading data should be enough. Using it in smart ways, 
+						we can create library data anlytics tools and handle our real-time data interactively. 
 						<br></br>
-						Sierra APIs is great "OPEN" services and approachable. Using it in smart ways, we can handle 
-						our real-time data interactively. I want to hear your feedback later if this combination does 
+						Good news is that Sierra APIs is "OPEN" services and approachable anytime. 
+						I want to hear your feedback later if this combination does 
 						make sense to you. 
 					</aside>
 				</section>	
 				<section>
 					<h1>What kinds </h1><h3>of<br> business and collection analytics<br> do we need?</h3>
-					<aside class="notes">This is my question. In many time, we do not get to our point
-						because we cannot ask a right question? Is our point to get a fancy system which
+					<aside class="notes">This is my next question. In many time, we do not get to our point
+						because we cannot ask a right question? Is our point getting a fancy system which
 						can do milllion things meticulously and omnipresently? I don't think so. Our local library can
-						build their tools that are suitably customized for their own purpose and in their own context. 
+						build our own tools that are suitable for their own purpose and in their own context. 
 					</aside>
 				</section>			
 				<section>
@@ -575,12 +594,12 @@
 						</li>
 					</ul>
 					<aside class="notes">Using the techniques shown previously, we can create many analytics tools. 
-						Once we crated the tools, we can re-run or auto-run them conveniently. On Jupyter, we can share 
-						data and communicate we find. 
+						Once we created the tools, we can re-run or auto-run them conveniently. On Jupyter, we can share 
+						data and communicate what we find. 
 						<br><br>
 						I will share two examples of analytics tools. (Slide)
 						<br><br>
-						(Show the code, jupyter/sierra_tools.ipynb)
+						<span style="color:darkgreen">(Show the code, jupyter/sierra_tools.ipynb)</span>
 						</aside>	
 				</section>
 				<section>
@@ -601,9 +620,13 @@
 							</ul>
 						</li>
 					</ul>
-					<aside class="notes">Everywhere people talks about data today. We librarian should ask where 
-						our data is located? (for example, Slide) We can ask, "can we harvest the data?" We can ask, 
-						"Is it useful or not?" The rest of story is your imgination. 
+					<aside class="notes">Everywhere people talks about data today. We librarians have always handled
+						data. We can ask where our data is located. <span style="color:darkgreen">(for example, Slide) </span> 
+						We can ask, "can we	harvest certain data?" "Is it valuable or not?" 
+						<br><br>
+						The ultimate goal of analyzing data is to learn 
+						users' interactions with information resource. We can increase the efficiency of library
+						services when we know how our users and we consumes our resources.  
 					</aside>					
 				</section>
 				<section>
@@ -614,14 +637,14 @@
 						I can finish this presentation with the capital "THE END". But something was going on in my mind.
 						So, I announce today that I will create "Library Data Group". This group will explore various 
 						possibilities of using library data and of creating analytics tool. So, if you are interested in, 
-						please send me an email. I think we can grow teaching and learning each other.  
+						please send me an email. I think we can grow together teaching and learning each other.  
 					</aside>	
 				</section>
 				
 				<section data-transition="slide" data-background="#ff9999" data-background-transition="zoom">
-					<h1>Thanks</h1>
-					<aside class="notes">My 10 year old daughter said that the last THANKS slide is the most important. 
-						So, she said that it must be pretty. Here we have. THANKS.
+					<h1>Thank You.</h1>
+					<aside class="notes">My 10 year old daughter said that the last THANKS slide is 
+						the most important and so must be pretty. Here we have. THANK YOU.
 					</aside>	
 				</section>
 			</div>

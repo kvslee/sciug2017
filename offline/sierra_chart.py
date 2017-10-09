@@ -22,7 +22,7 @@ try:
     # create a database session in which SQL commands will run
     cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     # run a SQl command  
-    cursor.execute(open("./sql/circ_trans.sql", 'r').read(), {"interval": "10 days", "trans_types": ('o', 'i', 'f', 'r')})
+    cursor.execute(open("./sql/circ_trans.sql", 'r').read(), {"interval": "10 days", "trans_types": ('o', 'i','f', 'r')})
     # fetch all rows of a query result
     circ_trans = cursor.fetchall()
 except psycopg2.Error as error:
