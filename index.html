@@ -35,7 +35,7 @@
 					<aside class="notes">
 				        Welcome everyone. Hi, my name is SeongHeon. I am a systems & technology librarian at Chapman University Law Library. 
 						First of all, thank you all for being my audience. Today, I want to share about Sirera SQL API and Visualized Data Analysis. 
-						This presentation is motivated by my summer project, that creats an automated/visualized report using Sierra SQL API. 
+						This presentation is motivated by my summer project, that creates an automated/visualized report using Sierra SQL API. 
 						Even though I am still on the progress of the project, I found some useful things that I want to share with you. 
 						<br><br>
 						When SCIUG requsted presentation proposals, they also sent out a list of interests. I find that many members are 
@@ -51,7 +51,7 @@
 						Why don't we start with previewing an outcome that you are expected to build yourself after this presentation.
 						This will give us a chance to understand our goal of this presentation. During the last summer, I developed 
 						a circulation transaction report using Sierra SQL API and Plotly. The basic idea is to extract data from 
-						Sierra's PostgreSql database and to create a visualized report. 
+						Sierra's PostgreSql database (circ_trans table) and to create a visualized report. 
 						<br><br>
 						Let's take a look at a sample outcome.
 					</aside>
@@ -185,12 +185,12 @@
 						<li>Import: File Upload, URL Link, SQL DB Connector</li>
 					</ul>
 					<aside class="notes">Show Plotly examples, different types of charts.<br><br>
-					<span style="color:darkgreen"> (Slide)</span>>
+					<span style="color:darkgreen"> (Slide)</span>
 					 Create a sample chart of library checkouts. <br>
 					A: Leatherby, Law, Brandman, Science, Music<br>
 					B: 530, 280, 74, 50, 38 	<br>
 					Bar, Pie, Scatter <br><br>
-					We see that it is very easy to create a plotly chart online. In summary, to create a chart, we need
+					We see that it is very easy to create a plotly chart online. To create a chart, we needed
 					data, plot type, attributes (axes)
 					</aside>
 				</section>															
@@ -204,7 +204,7 @@
 						<li>Interactive: display modeBar</li>
 						<li>How to embed charts in a html?</li>
 					</ul>
-					<aside class="notes">Plotly supports many languages, so that users can choose what they want. 
+					<aside class="notes">Now, I will demonstrate how to use Plotly offline. Plotly supports many languages, so that users can choose what they want. 
 						Plotly maintains separate webpages for each language. We will choose Python. 
 						<br><br>
 					Python Library pages show many examples and API documentation. For example, if you go Pie Chart, 
@@ -290,7 +290,7 @@
 						<li><span class="fragment highlight-green" data-fragment-index="4">Creating/testing</span> SQL queries</li>
 					</ul>
 					<aside class="notes">The easiest way to work with Sierra database is using SQL Client. PostgreSQL has
-						its own SQL client, called PGAdmin. You can download it with PostgeSQl database on your local PC.(Slide)
+						its own SQL client, called PGAdmin. You can download it with PostgeSQL database on your local PC.(Slide)
 					<br><br>
 					<span style="color:darkgreen"> (Slide)</span>>
 					</aside>	
@@ -520,8 +520,9 @@
 						</li>
 						<li><a href="https://plot.ly/python/offline/" target="_blank">More Info</a></li>
 					</ul>
-					<aside class="notes">Let's talk about how to use Plotly on Jupyter. We created offline Plotly charts.
-						We will re-use the same codes. We can present the same charts on Jupyter with a few tweaks,  
+					<aside class="notes">Let's talk about how to use Plotly on Jupyter. We created offline Plotly charts
+						with a dummy data. Later, we use create another offline Plotly chart using actual Sierra data. 
+						We will re-use the same codes. We can present the same charts on Jupyter this time with a few tweaks,  
 						<br><br>
 						(Slide - three tweaks)
 						<br><br>
